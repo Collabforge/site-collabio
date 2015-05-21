@@ -1,0 +1,37 @@
+%article.thread-item.thread-item--comment{ng_controller: 'NewCommentItemController', aria-labelledby: 'comment-{{comment.id}}' }
+  .thread-item-context-menu.dropdown.pull-right{ng-if: 'showContextMenu()'}
+    %button.btn.lmo-btn-nude.dropdown-toggle{href:''}
+      %i.fa.fa-chevron-down{aria-hidden: 'true'}
+      .sr-only{translate: 'new_comment_item.context_menu.aria_label'}
+    .dropdown-menu.dropdown-menu-right
+      %ul.dropdown-menu-items
+        %li.dropdown-menu-item{ng-if: '::canEditComment()'}
+          %a.dropdown-menu-item-label{href: '', ng-click: 'editComment()', translate: 'new_comment_item.context_menu.edit_comment'}
+        %li.dropdown-menu-item{ng-if: '::canDeleteComment()'}
+          %a.dropdown-menu-item-label{href: '', ng-click: 'deleteComment()', translate: 'new_comment_item.context_menu.delete_comment'}
+
+  .thread-item-header.media
+    .media-left
+      %user_avatar{user: "comment.author()"}
+    .media-body
+      %span{ng-if: 'comment.parentId', translate: 'new_comment_item.in_reply_to', translate-values: '{author: comment.authorName(), recipient: comment.parentAuthorName()}'}
+      %span{ng-if: '!comment.parentId'}
+        %h3.new-comment__author-name{id: 'comment-{{comment.id}}'} {{ ::comment.authorName() }}
+
+  .thread-item-body{btf-markdown: 'comment.body' }
+
+  .thread-item-attachments
+    .thread-attachment{ng-repeat: 'attachment in comment.attachments()'}
+      %attachment{attachment: 'attachment'}
+
+  .thread-item-footer
+    .thread-actions-and-meta
+      %a{href: '#', translate: 'common.action.like', ng-show: '!currentUserLikesIt()', ng_click: 'like()'}>
+      %a{href: '#', translate: 'common.action.unlike', ng_click: 'unlike()', ng-show: 'currentUserLikesIt()'}>
+      %span{aria-hidden: 'true'}·
+      %a{translate: 'common.action.reply', href: '#', ng_click: 'reply()'}>
+      %span{aria-hidden: 'true'}·
+      %timeago{timestamp: 'comment.createdAt' }>
+
+    .thread-liked-by-sentence{ng_show: 'anybodyLikesIt()'}
+      {{ likedBySentence }}

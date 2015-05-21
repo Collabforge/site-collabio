@@ -1,0 +1,200 @@
+an:
+  frontpage: 52
+  help docs: 8
+  main: 88
+ar:
+  frontpage: 52
+  help docs: 7
+  main: 49
+be-BY:
+  frontpage: 58
+  help docs: 10
+  main: 92
+bg-BG:
+  frontpage: 9
+  help docs: 2
+  main: 41
+ca:
+  frontpage: 49
+  help docs: 7
+  main: 75
+cmn:
+  frontpage: 1
+  help docs: 1
+  main: 30
+cs:
+  frontpage: 76
+  help docs: 43
+  main: 80
+da:
+  frontpage: 52
+  help docs: 8
+  main: 88
+de:
+  frontpage: 58
+  help docs: 46
+  main: 96
+el:
+  frontpage: 58
+  help docs: 42
+  main: 96
+eo:
+  frontpage: 52
+  help docs: 8
+  main: 86
+es:
+  frontpage: 58
+  help docs: 70
+  main: 99
+fa-IR:
+  frontpage: 52
+  help docs: 1
+  main: 13
+fi:
+  frontpage: 0
+  help docs: 0
+  main: 6
+fr:
+  frontpage: 58
+  help docs: 26
+  main: 97
+ga-IE:
+  frontpage: 44
+  help docs: 6
+  main: 54
+gl:
+  frontpage: 29
+  help docs: 8
+  main: 69
+he:
+  frontpage: 53
+  help docs: 8
+  main: 64
+hi:
+  frontpage: 0
+  help docs: 0
+  main: 1
+hr:
+  frontpage: 58
+  help docs: 14
+  main: 46
+hu:
+  frontpage: 61
+  help docs: 74
+  main: 97
+id:
+  frontpage: 29
+  help docs: 2
+  main: 54
+it:
+  frontpage: 60
+  help docs: 8
+  main: 89
+it-CH:
+  frontpage: 0
+  help docs: 0
+  main: 0
+ja:
+  frontpage: 44
+  help docs: 4
+  main: 62
+km:
+  frontpage: 7
+  help docs: 2
+  main: 49
+ko:
+  frontpage: 52
+  help docs: 3
+  main: 56
+lv:
+  frontpage: 0
+  help docs: 0
+  main: 0
+mi:
+  frontpage: 1
+  help docs: 0
+  main: 4
+mk:
+  frontpage: 52
+  help docs: 3
+  main: 54
+ml:
+  frontpage: 9
+  help docs: 3
+  main: 52
+ml-IN:
+  frontpage: 0
+  help docs: 0
+  main: 0
+nl-NL:
+  frontpage: 58
+  help docs: 47
+  main: 93
+pl:
+  frontpage: 52
+  help docs: 1
+  main: 18
+pt-BR:
+  frontpage: 100
+  help docs: 100
+  main: 100
+pt-PT:
+  frontpage: 16
+  help docs: 0
+  main: 9
+ro:
+  frontpage: 52
+  help docs: 8
+  main: 89
+ru:
+  frontpage: 58
+  help docs: 8
+  main: 63
+sk:
+  frontpage: 52
+  help docs: 8
+  main: 88
+sl:
+  frontpage: 58
+  help docs: 10
+  main: 91
+sr:
+  frontpage: 58
+  help docs: 10
+  main: 95
+sr-RS:
+  frontpage: 58
+  help docs: 10
+  main: 95
+sv:
+  frontpage: 52
+  help docs: 8
+  main: 88
+te:
+  frontpage: 15
+  help docs: 2
+  main: 28
+tr:
+  frontpage: 52
+  help docs: 8
+  main: 88
+uk:
+  frontpage: 58
+  help docs: 8
+  main: 75
+ur:
+  frontpage: 0
+  help docs: 0
+  main: 0
+ur-PK:
+  frontpage: 0
+  help docs: 0
+  main: 0
+vi:
+  frontpage: 7
+  help docs: 2
+  main: 44
+zh-TW:
+  frontpage: 60
+  help docs: 44
+  main: 99
