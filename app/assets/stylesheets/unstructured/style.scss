@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "Museo-500";
+  src: url("../font/2E2515_0_0.eot");
+  src: url("../font/font/2E2515_0_0.eot?#iefix") format("embedded-opentype"), url("../font/font/2E2515_0_0.woff2") format("woff2"), url("../font/font/2E2515_0_0.woff") format("woff"), url("../font/font/2E2515_0_0.ttf") format("truetype");
+}
+
+.test {
+ color: red;
+ font-weight: 900;
+}
+
+body {
+ color: #333 !important; 
+}
+
+h1 {
+ font-family: 'Museo-500';   
+}
+
+h2{
+ font-family: 'Museo-500';   
+}
+
+h3{
+ font-family: 'Museo-500';   
+}
+
+h4{
+ font-family: 'Museo-500';   
+}
+
+h5{
+ font-family: 'Museo-500';   
+}
+
+h6{
+ font-family: 'Museo-500';   
+}
+
+
+
+.navbar-fixed-top {
+  border-bottom: 0px solid #dbdbdb;
+  box-shadow: none;
+  background: #333333;
+}
+
+.navbar .container {
+  background-color: #333;
+  max-width: 980px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.navbar > .container .navbar-brand {
+  margin-left: 0px;
+}
+
+.navbar-nav.navbar-right:last-child {
+  margin-right: 0px;
+}
+
+.navbar-brand {
+  float: left;
+  padding: 0px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+}
+
+.navbar li > a {
+  color: #727272;
+  display: block;
+  padding: 0px;
+  line-height: 18px;
+}
+
+.navbar li {
+  margin-top: 1px;
+  text-transform: capitalize;
+}
+
+.main-container {
+  background: #fff;
+  margin-top: 30px;
+}
+
+.nav-float-right {
+  float: right;   
+}
+
+li.dropdown#user {
+  float: left;
+  max-width: 300px;
+  height: auto;
+  padding-top: 7px;
+}
+
+.child-navigation {
+  color: #adadad;
+  display: inline;
+  margin: 0;
+  float: left;
+  padding: 10px 0px 3px 0px;
+  border-bottom: 0px;
+  text-transform: uppercase;
+  font-weight: auto;
+  font-size: 0.85714em;
+  margin-right: 35px;
+  margin-left: -35px;
+}
+
+.child-navigation ul {
+   display: inline-flex;  
+   float: right;
+}
+
+.child-navigation li {
+  margin-left: 30px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.user-menu-list {
+      padding: 0px;
+}
+
+.navbar li#inbox-container {
+  float: left;
+  position: relative;
+  margin-right: 25px;
+  margin-top: 1px;
+}
+
+.user-assets {
+ padding-top: 10px;   
+ margin-right: 0px;
+ padding-right: 0px;
+}
+
+input#search_form_query {
+  height: auto;
+  width: 103px;
+  color: #6a6767;
+  top: 0px;
+  padding: 5px 35px 2px 5px;
+  font-size: 1.286em;
+  border: 0px solid #d1d1d1;
+  background-color: #ededed !important;
+  color: #666666;
+  border-radius: 0px;
+  font-family: "Museo-500";
+  box-shadow: none;
+  font-size: 14px;
+}
+
+.input-group-addon {
+  padding: 0px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: #555555;
+  text-align: center;
+  background-color: #eeeeee;
+  border: 0px;
+  border-radius: 0px;
+  padding-right: 5px;
+  background-color: #ededed !important;
+}
+
+.app-logo {
+  width: 182px;
+  margin: 9px 0 0 10px;
+  height: 64px;
+  background: 0 0 no-repeat;
+  background-size: contain;
+}
+
+.navbar .navbar-header {
+  width: 100%;
+  padding-top: 10px;
+}
+
+.app-logo.second-logo {
+  width: 180px;
+  margin-top: 6px;
+  margin-left: 15px;
+}
+
+.header-top {
+  margin-bottom: 20px;
+}
+
+body {
+  color: #333;
+  margin-top: 0px;
+}
+
+body {
+  background: url('https://shapermit.collabcoapp.com/sites/default/themes/flip_theme/img/background-abstract-placeholder.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: -10px 183px;
+  background-color: #dcddd7;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4em;
+  letter-spacing: normal;
+}
+
+.navbar-default {
+  background-color: #333;
+  border: 0px;
+  border-radius: 0px;
+}
+
+li.dropdown#user #header-user-image {
+  position: relative;
+  bottom: 5px;
+  margin-right: 5px;
+  display: none;
+}
+
+li.dropdown#groups .dropdown-toggle {
+  width: 80px;
+}
+
+.navbar-nav {
+ float: right;   
+}
+
+.child-navigation ul a {
+  color: #adadad;
+}
+
+.child-navigation ul a:hover {
+  color: white;
+}
+
+span#user-name-dropdown {
+  color: #adadad;
+}
+
+li.dropdown#user .dropdown-menu {
+  min-width: 128px;
+  margin-top: 1px;
+  margin-left: 4px;
+  border-radius: 0px;
+  border: none;
+  background: #333333;
+}
+
+.navbar-header .dropdown-menu li > a:hover {
+ background-color: #dc291e;   
+}
+
+li.dropdown#user .dropdown-menu a {
+  margin-top: 0px;
+  display: block;
+  padding: 0px 27px 0px 20px;
+  clear: both;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: white;
+  white-space: nowrap;
+}
+
+span#user-name-dropdown:active {
+  color: white;
+}
+
+.container {
+ max-width: 960px;   
+}
+
+.navbar-form {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 10px 0px;
+  border-top: 0px;
+  border-bottom: 0x;
+  box-shadow: none;
+  margin-top: -6px !important;
+  margin-bottom: 0px;
+}
+
+.navbar .fa {
+  height: 17px;
+}
+
+.navbar .fa-search {
+  color: #888;
+  font-size: 15px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+ color: white;   
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+ background-color: transparent;
+  color: white;   
+}
