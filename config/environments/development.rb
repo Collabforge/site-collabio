@@ -1,10 +1,11 @@
 Loomio::Application.configure do
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE 
-  ENV['CANONICAL_HOST'] = 'localhost'
-  ENV['CANONICAL_URL'] = 'localhost'
-  ENV['DEFAULT_SUBDOMAIN'] = ''
+  ENV['TLD_LENGTH'] = '2'
+  ENV['CANONICAL_HOST'] = 'shapermitl.collabcoapp.com'
+  ENV['CANONICAL_URL'] = 'shapermitl.collabcoapp.com'
+  ENV['DEFAULT_SUBDOMAIN'] = 'shapermitl'
   ENV['SMTP_DOMAIN'] = 'smtp.mandrillapp.com'
-  ENV['DOMAIN'] = 'localhost'
+  ENV['DOMAIN'] = 'shapermitl.collabcoapp.com'
 
   # In the development environment your application's code is reloaded on
   # every request.  This slows down response time but is perfect for development
@@ -39,13 +40,13 @@ Loomio::Application.configure do
 
   # config.action_mailer.asset_host = "http://localhost:3000"
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { host: 'localhost' }
+  config.action_mailer.default_url_options = { host: 'shapermitl.collabcoapp.com' }
   config.action_mailer.delivery_method = :smtp
 
   # config.action_mailer.smtp_settings = { :address => "localhost", :port => 1025 }
 
   config.eager_load = false
-  config.roadie.url_options = {host: 'localhost'}
+  config.roadie.url_options = {host: 'shapermitl.collabcoapp.com'}
 
   # Use these settings to send mail from gmail. If you use 2-step authentication on
   # your google account, create a new application-specific password and use it in here
@@ -54,7 +55,7 @@ Loomio::Application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtp.mandrillapp.com',
     port:                 587,
-    domain:               'localhost',
+    domain:               'shapermitl.collabcoapp.com',
     user_name:            'webmaster@collabforge.com',
     password:             'MzFXcJfOBNj7xx8v33draw',
     authentication:       'plain',

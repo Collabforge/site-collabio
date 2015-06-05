@@ -2,5 +2,5 @@
 require ::File.expand_path('../config/environment',  __FILE__)
 
 # Redirect to non-www address (https://github.com/tylerhunt/rack-canonical-host)
-use Rack::CanonicalHost, 'localhost'
+use Rack::CanonicalHost, 'shapermitl.collabcoapp.com'
 run Loomio::Application
