@@ -29,3 +29,8 @@ bin/
 /lineman/app/css/modules.scss
 .powenv
 /lineman/app/css/modules.scss
+Gemfile.lock
+config.ru
+/config/application.yml
+/config/environments/development.rb
+/config/secrets.example
