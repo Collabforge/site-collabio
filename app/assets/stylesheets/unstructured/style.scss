@@ -98,7 +98,7 @@ li.dropdown#user {
   float: left;
   max-width: 300px;
   height: auto;
-  padding-top: 7px;
+  padding-top: 9px;
 }
 
 .child-navigation {
@@ -111,8 +111,8 @@ li.dropdown#user {
   text-transform: uppercase;
   font-weight: auto;
   font-size: 0.85714em;
-  margin-right: 35px;
-  margin-left: -35px;
+  margin-right: 0px;
+  margin-left: -46px;
 }
 
 .child-navigation ul {
@@ -127,6 +127,7 @@ li.dropdown#user {
 
 .user-menu-list {
       padding: 0px;
+    margin-left: 10px;
 }
 
 .navbar li#inbox-container {
@@ -201,11 +202,11 @@ body {
 }
 
 body {
-  background: url('https://shapermit.collabcoapp.com/sites/default/themes/flip_theme/img/background-abstract-placeholder.png');
+  background: url('/assets/background-abstract-placeholder.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-position: -10px 183px;
+  background-position: -10px 185px;
   background-color: #dcddd7;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -237,6 +238,9 @@ li.dropdown#groups .dropdown-toggle {
 
 .child-navigation ul a {
   color: #adadad;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 11.4px;
 }
 
 .child-navigation ul a:hover {
@@ -309,4 +313,76 @@ span#user-name-dropdown:active {
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
  background-color: transparent;
   color: white;   
+}
+
+li.dropdown#groups .dropdown-menu {
+  min-width: 230px;
+  padding-bottom: 0;
+  border: 0px;
+  border-radius: 0px !important;
+  padding-top: 0px;
+  margin-top: 5px;
+}
+
+li#groups ul.dropdown-menu li.group-item.group-links a {
+  font-size: 13px;
+  padding: 12px;
+  text-align: center;
+  color: #08C;
+}
+
+input.group-dropdown-search {
+  padding: 7px;
+  width: 100%;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+}
+
+#group-dropdown-items a {
+  padding: 0px 5px 5px 15px;
+}
+
+.navbar #notifications-container .dropdown-menu {
+  width: 270px;
+  padding-bottom: 0;
+  border: 0px;
+  border-radius: 0px;
+  margin-top: 5px;
+}
+
+.btn {
+  border-radius: 0px;
+  border: 0px;
+}
+
+.footer-right {
+  text-align: right;
+  margin-bottom: 20px;
+  padding-right: 0px;
+}
+
+.footer-left {
+  margin-bottom: 25px;
+  padding-left: 0px;
+}
+
+.footer-center {
+  text-align: center;
+}
+
+.footer {
+  border-top: 0px;
+  margin-top: 20px !important;
+  padding: 0px;
+  /* font-size: 12px; */
+  line-height: 1.4em;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: .857142em;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  color: #333;
+  padding-top: 15px;
+  max-width: 960px;
+  margin: auto;
 }
