@@ -744,9 +744,9 @@ body.discussions.show #content-comments ul#activity-list .activity-item-body {
 
 
 #content-proposal .vote-buttons .btn:hover {
--webkit-animation: rotate 4.0123s 20 linear;
--moz-animation: rotate 4.0123s 20 linear;
--o-animation: rotate 4.0123s 20 linear;
+-webkit-animation: rotate 0.3 1 linear;
+-moz-animation: rotate 0.3 1 linear;
+-o-animation: rotate 0.3 1 linear;
 }
 
 @-webkit-keyframes rotate {
@@ -760,4 +760,8 @@ to { -moz-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
 @-o-keyframes rotate {
 from { -o-transform: rotate(0deg) scale(1) skew(1deg) translate(0px); }
 to { -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
+}
+
+#content-proposal .vote-buttons a:hover {
+  background-color: transparent;
 }
