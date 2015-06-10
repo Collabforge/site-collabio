@@ -478,6 +478,11 @@ body.welcome.index .navbar .navbar-header {
 }
 
 .sessions.new .container .signin_container .login {
+  background-color: #dc291e;
+  color: white;   
+}
+
+.sessions.new .container .signin_container .login:hover {
   background-color: red;
   color: white;   
 }
