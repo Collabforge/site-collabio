@@ -469,12 +469,15 @@ body.welcome.index .navbar .navbar-header {
 }
 
 .sessions.new p {
-  font-size: 18px;
-  line-height: 24px;
   margin-bottom: 18px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.4em;
-  letter-spacing: normal;
+  font-size: 14px !important;
+  line-height: 1.4em !important;
+  letter-spacing: normal !important;
+}
+
+.sessions.new .container .signin_container .login {
+  background-color: red;
+  color: white;   
 }
