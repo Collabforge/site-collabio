@@ -744,9 +744,9 @@ body.discussions.show #content-comments ul#activity-list .activity-item-body {
 
 
 #content-proposal .vote-buttons .btn:hover {
--webkit-animation: rotate 0.3 1 linear;
--moz-animation: rotate 0.3 1 linear;
--o-animation: rotate 0.3 1 linear;
+-webkit-animation: rotate 0.3s 1 linear;
+-moz-animation: rotate 0.3s 1 linear;
+-o-animation: rotate 0.3s 1 linear;
 }
 
 @-webkit-keyframes rotate {
