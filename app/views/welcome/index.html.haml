@@ -1,0 +1,7 @@
+%h1 Welcome to ShapeRMIT Discussions!
+
+- if current_user_or_visitor.is_logged_in?
+  %p hello user
+- else
+  %h2 Log in to access discussions
+  %p Simply click "Log in" and then "Connect ShapeRMIT account" and you'll be able to access the discussions.

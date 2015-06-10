@@ -8,6 +8,8 @@ Loomio::Application.routes.draw do
     get 'setup_all_notifications'
   end
 
+  root :to => 'welcome#index'
+
   scope '/angular', controller: 'angular', path: 'angular', as: 'angular' do
     get '/' => 'angular#index'
     post :on
@@ -194,9 +196,9 @@ Loomio::Application.routes.draw do
     patch '/' => 'groups#update'
   end
 
-  constraints(MainDomainConstraint) do
-    root :to => 'marketing#index'
-  end
+  # constraints(MainDomainConstraint) do
+  #   root :to => 'marketing#index'
+  # end
 
   delete 'membership_requests/:id/cancel', to: 'groups/membership_requests#cancel', as: :cancel_membership_request
 
