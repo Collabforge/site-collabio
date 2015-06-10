@@ -73,8 +73,38 @@
         
 
       - else
-        %a.navbar-brand.app-logo{ href: dashboard_or_root_path, title: t(:"organisation.name"), style: "background-image: url(#{logo_path})" }
-        %nav
-          %ul.nav.navbar-nav.navbar-right.pull-right
-            - unless controller_name == "group_requests"
-              %li=link_to t(:log_in), new_user_session_path(return_to: request.original_url), class: 'login'
+        .navbar.navbar-top{role: 'navigation'}
+          %nav.navbar.navbar-default.navbar-top
+            .container
+              .navbar-header
+                %a.navbar-brand
+                  .container
+                    .row.header-top
+                      %a{ href: "https://shapermit.com/", title: "RMIT University home page" }
+                        .col-md-3.app-logo{ style: "background-image: url(/assets/rmit-logo.png)" }
+                        .col-md-2.app-logo.second-logo{ style: "background-image: url(/assets/shape-rmit-logo.png)" }
+                        .col-md-4.nav-float-right.collapse.navbar-collapse#navbar-collapse
+                          %ul.nav.navbar-nav
+                            .user-options.visible-xs
+                            = render 'search'
+                        .col-md-3.user-assets.nav-float-right
+                    %a{ href: "https://shapermit.com/", title: "ShapeRMIT home" }
+
+              .container
+                .row
+                  .col-md-3.child-navigation-sign-log.hidden-xs
+                    %ul
+                      %li     
+                      = link_to 'Log In', 'sign_in'
+                  .col-md-9.child-navigation 
+                    %ul
+                      %li     
+                      = link_to 'THE STORY SO FAR', 'http://shapermit.com/the-story-so-far'
+                      %li 
+                      = link_to 'THE NEXT 5 YEARS', 'http://shapermit.com/the-next-5-years'
+                      %li 
+                      = link_to 'DISCUSSIONS & WORKGROUPS', 'http://shapermit.com/discussions-and-workgroups'
+                      %li 
+                      = link_to 'NEWS & EVENTS', 'http://shapermit.com/news-and-events'
+                      %li 
+                      = link_to 'CONTACT', 'http://shapermit.com/contact'

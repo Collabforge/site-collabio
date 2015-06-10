@@ -1,7 +1,7 @@
 !!!
 %html{locale: current_locale}
   %head
-    - title = @title ? @title : "Loomio | Collaborative Decision-Making"
+    - title = @title ? @title : "Shape RMIT | Loomio Portal"
     %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
     %meta{content: "IE=Edge", "http-equiv" => "X-UA-Compatible"}/
     %title= title
@@ -16,9 +16,44 @@
       = render 'google_tag_manager'
 
     .navbar.navbar-top{role: 'navigation'}
-      .navbar-inner
-        .navbar-container
-          = link_to " ", root_path, class: 'pages-nav-logo', title: 'Go to Loomio home page'
+      %nav.navbar.navbar-default.navbar-top
+        .container
+          .navbar-header
+            %a.navbar-brand
+              .container
+                .row.header-top
+                  %a{ href: "https://shapermit.com/", title: "RMIT University home page" }
+                    .col-md-3.app-logo{ style: "background-image: url(/assets/rmit-logo.png)" }
+                    .col-md-2.app-logo.second-logo{ style: "background-image: url(/assets/shape-rmit-logo.png)" }
+                    .col-md-4.nav-float-right.collapse.navbar-collapse#navbar-collapse
+                      %ul.nav.navbar-nav
+                        .user-options.visible-xs
+                        = render 'search'
+                    .col-md-3.user-assets.nav-float-right
+                %a{ href: "https://shapermit.com/", title: "ShapeRMIT home" }
+
+          .container
+            .row
+              .col-md-3.child-navigation-sign-log.hidden-xs
+                %ul
+                  %li     
+                  = link_to 'Log In', 'sign_in'
+              .col-md-9.child-navigation 
+                %ul
+                  %li     
+                  = link_to 'THE STORY SO FAR', 'http://shapermit.com/the-story-so-far'
+                  %li 
+                  = link_to 'THE NEXT 5 YEARS', 'http://shapermit.com/the-next-5-years'
+                  %li 
+                  = link_to 'DISCUSSIONS & WORKGROUPS', 'http://shapermit.com/discussions-and-workgroups'
+                  %li 
+                  = link_to 'NEWS & EVENTS', 'http://shapermit.com/news-and-events'
+                  %li 
+                  = link_to 'CONTACT', 'http://shapermit.com/contact'
+                    
+                    
+                    
+                    
 
     .container.home-flash
       = render 'flash_messages', :flash => flash

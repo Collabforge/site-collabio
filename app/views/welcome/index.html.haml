@@ -1,13 +1,18 @@
-%h1 Welcome to ShapeRMIT Discussions!
+.row
+  .col-md-6.col-md-offset-3.col-xs-12
+    %center
+      %img.loomio-globe(src="/assets/loomio-globe.png")
+        %h2 Welcome to the #shapeRMIT Loomio discussions portal!
+    %p You're just a few clicks away from generating important ideas and engaging in discussions with other students, alumni and staff to help shape RMIT's future.
 
-- if current_user_or_visitor.is_logged_in?
-  %p
-    Welcome back! You can now access your
-    = link_to t(:dashboard), dashboard_path
-    or explore
-    = link_to 'Public Groups', explore_path
-- else
-  %p
-    To join in the discussions, simply
-    = link_to t(:log_in), new_user_session_path(return_to: request.original_url), class: 'login'
-    and then "Connect ShapeRMIT account" and you'll be able to access the discussions.
+    - if current_user_or_visitor.is_logged_in?
+      %p
+        Welcome back! You can now access your
+        = link_to t(:dashboard), dashboard_path
+        or explore
+        = link_to 'Public Groups', explore_path
+    - else
+      %p
+        To join in the discussions, simply login below and then "Connect ShapeRMIT account":
+      %i.fa.fa-chevron-right.login-link
+        = link_to t(:log_in), new_user_session_path(return_to: request.original_url), class: 'login'
