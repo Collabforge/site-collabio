@@ -550,7 +550,8 @@ body.groups.show .group-heading {
   margin-bottom: 20px;
   background-color: #fff;
   border-radius: 0px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  border: 0px;
 }
 
 body.discussions.show #discussion-content-container #discussion-context {
@@ -640,4 +641,40 @@ body.groups.show .discussion-preview .discussion-title:before {
 
 .dashboard .group-title .home-title {
   font-size: 26px !important;
+}
+
+.panel-default > .panel-heading {
+  color: #eee;
+  background-color: #333;
+  border-color: #ddd;
+  border-radius: 0px;
+}
+
+.panel h4 {
+  margin-bottom: 0;
+  color: #eee;
+}
+
+.panel-footer {
+  padding: 10px 15px;
+  background-color: #555;
+  border-top: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  color: #eee;
+}
+
+.panel-footer a {
+  color: #eee;
+}
+
+li.group-item {
+  background-color: transparent;
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+.panel-body {
+  padding: 15px;
+  background-color: #f1f1f1;
 }
