@@ -623,3 +623,11 @@ body.groups.show .discussion-preview .discussion-title:before {
 .row.discussion-header-container {
   margin-top: -10px;
 }
+
+.discussion-preview .discussion-title:before {
+  content: "\f054";
+  font-family: fontawesome;
+  margin-right: 5px;
+  display: inline-block;
+  color: #dc291e;
+}
