@@ -508,10 +508,6 @@ body.welcome.index .navbar .navbar-header {
     padding: 0px;
 }
 
-body.discussions.show .selector-panel {
- border-radius: 0px;   
-}
-
 body.discussions.show #content-comments {
   border-right: 0px;
   padding: 10px 10px 10px 15px;
@@ -519,7 +515,7 @@ body.discussions.show #content-comments {
 
 body.discussions.show .selector-panel {
   background-color: #ebebeb;
-  border-radius: 8px;
+  border-radius: 0px;
   border: 0px;
   margin: 0 0 20px 0;
   min-height: 59px;
