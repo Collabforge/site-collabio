@@ -540,3 +540,13 @@ ul.selector-list li.selector-item {
   color: #555;
   font-weight: normal;
 }
+
+body.groups.show .group-heading {
+  background: url(/assets/default-cover-photo.png) 0 0 no-repeat;
+  margin: -0px -15px 0 -15px;
+  position: relative;
+  height: 200px;
+  max-width: 1170px;
+  background-position-y: bottom;
+  background-position-x: center;
+}
