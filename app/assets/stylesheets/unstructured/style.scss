@@ -561,6 +561,7 @@ body.discussions.show #discussion-content-container #discussion-context {
   min-height: 70px;
   padding: 15px 10px 10px 15px;
   margin-bottom: 20px;
+  background-color: #f1f1f1;
 }
 
 .group-title .home-title {
@@ -618,7 +619,9 @@ body.groups.show .discussion-preview .discussion-title:before {
 }
 
 .row.discussion-header-container {
-  margin-top: -10px;
+  background-color: #333;    
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .discussion-preview .discussion-title:before {
@@ -677,4 +680,9 @@ li.group-item {
 .panel-body {
   padding: 15px;
   background-color: #f1f1f1;
+}
+
+h2#discussion-title {
+  color: #eee;
+  font-weight: 100;
 }
