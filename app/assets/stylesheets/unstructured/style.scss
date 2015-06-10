@@ -555,9 +555,9 @@ body.groups.show .group-heading {
 }
 
 body.discussions.show #discussion-content-container #discussion-context {
-  border-bottom: 1px solid #E6E6E6;
-  border-left: 1px solid #E6E6E6;
-  border-right: 1px solid #E6E6E6;
+  border-bottom: 0px;
+  border-left: 0px;
+  border-right: 0px;
   min-height: 70px;
   padding: 15px 10px 10px 15px;
   margin-bottom: 20px;
@@ -701,4 +701,33 @@ h2#discussion-title {
 
 a.close.hide-next-steps {
   color: inherit;
+}
+
+body.discussions.show #content-comments ul#activity-list .activity-item-body {
+ border-bottom: 0px;   
+}
+
+
+
+
+
+
+
+.rotate {
+-webkit-animation: rotate 4.0123s 20 linear;
+-moz-animation: rotate 4.0123s 20 linear;
+-o-animation: rotate 4.0123s 20 linear;
+}
+
+@-webkit-keyframes rotate {
+from { -webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(0px); }
+to { -webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
+}
+@-moz-keyframes rotate {
+from { -moz-transform: rotate(0deg) scale(1) skew(1deg) translate(0px); }
+to { -moz-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
+}
+@-o-keyframes rotate {
+from { -o-transform: rotate(0deg) scale(1) skew(1deg) translate(0px); }
+to { -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
 }
