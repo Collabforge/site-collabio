@@ -14,7 +14,8 @@ body {
 }
 
 h1 {
- font-family: 'Museo-500';   
+ font-family: 'Museo-500';
+  font-size: 26px !important;
 }
 
 h2{
@@ -485,4 +486,9 @@ body.welcome.index .navbar .navbar-header {
 .sessions.new .container .signin_container .login:hover {
   background-color: red;
   color: white;   
+}
+
+.page-container {
+  margin-top: 0px;
+  padding: 50px 30px 50px 40px;
 }
