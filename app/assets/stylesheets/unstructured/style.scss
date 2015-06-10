@@ -563,6 +563,7 @@ body.discussions.show #discussion-content-container #discussion-context {
   border-right: 1px solid #E6E6E6;
   min-height: 70px;
   padding: 15px 10px 10px 15px;
+  margin-bottom: 20px;
 }
 
 .group-title .home-title {
@@ -617,4 +618,8 @@ body.groups.show .discussion-preview .discussion-title:before {
 
 .group-link-name {
   font-weight: normal;
-  margin-top: 0.3
+}
+
+.row.discussion-header-container {
+  margin-top: -10px;
+}
