@@ -627,3 +627,17 @@ body.groups.show .discussion-preview .discussion-title:before {
   display: inline-block;
   color: #dc291e;
 }
+
+#content-proposal .vote-buttons .btn {
+  border-radius: 40px;
+  border: 1px solid #eee;
+  float: left;
+  margin: 10px 5px 15px 0;
+  padding: 3px;
+  width: 50px;
+  height: 50px;
+}
+
+.dashboard .group-title .home-title {
+  font-size: 26px !important;
+}
