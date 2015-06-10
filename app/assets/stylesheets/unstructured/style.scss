@@ -587,3 +587,21 @@ body.discussions.show #discussion-content-container #discussion-context {
 .groups .home-title a:before {
   display: none;
 }
+
+.groups .home-title {
+  display: inline;
+  font-size: 26px !important;
+}
+
+ul.selector-list.bordered {
+  border-top: 1px solid #BBB;
+  border-left: 1px solid #BBB;
+  border-right: 1px solid #BBB;
+}
+
+.discussion-preview {
+  background-color: #f9f9f9;
+  float: left;
+  height: 47px;
+  width: 100%;
+}
