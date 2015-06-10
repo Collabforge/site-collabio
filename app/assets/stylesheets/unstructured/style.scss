@@ -572,10 +572,6 @@ body.discussions.show #discussion-content-container #discussion-context {
   font-size: 18px !important;
 }
 
-.group-title .home-title a {
-  color: #dc291e;
-}
-
 .group-title .home-title a:before {
   content: "\f054";
   font-family: fontawesome;
@@ -593,15 +589,21 @@ body.discussions.show #discussion-content-container #discussion-context {
   font-size: 26px !important;
 }
 
-ul.selector-list.bordered {
-  border-top: 1px solid #BBB;
-  border-left: 1px solid #BBB;
-  border-right: 1px solid #BBB;
-}
-
 .discussion-preview {
   background-color: #f9f9f9;
   float: left;
   height: 47px;
   width: 100%;
+}
+
+ul.selector-list.bordered {
+  border-top: 0px;
+}
+
+body.groups.show .discussion-preview .discussion-title:before {
+  content: "\f054";
+  font-family: fontawesome;
+  margin-right: 5px;
+  display: inline-block;
+  color: #dc291e;
 }
