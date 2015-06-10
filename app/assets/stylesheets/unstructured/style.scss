@@ -15,7 +15,6 @@ body {
 
 h1 {
  font-family: 'Museo-500';
-  font-size: 26px !important;
 }
 
 h2{
@@ -590,7 +589,6 @@ body.discussions.show #discussion-content-container #discussion-context {
 }
 
 .discussion-preview {
-  background-color: #f9f9f9;
   float: left;
   height: 47px;
   width: 100%;
@@ -607,3 +605,16 @@ body.groups.show .discussion-preview .discussion-title:before {
   display: inline-block;
   color: #dc291e;
 }
+
+.discussion-preview .group-name {
+  color: #777;
+  font-size: 0.9em;
+  margin-left: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.group-link-name {
+  font-weight: normal;
+  margin-top: 0.3
