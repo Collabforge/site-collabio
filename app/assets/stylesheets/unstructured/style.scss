@@ -267,7 +267,7 @@ li.dropdown#user .dropdown-menu {
 li.dropdown#user .dropdown-menu a {
   margin-top: 0px;
   display: block;
-  padding: 0px 27px 0px 20px;
+  padding: 2px 27px 2px 20px;
   clear: both;
   font-weight: 100;
   letter-spacing: 1px;
@@ -470,6 +470,7 @@ body.welcome.index .navbar .navbar-header {
 
 .navbar {
  border: 0px;   
+margin-bottom: 0px;
 }
 
 .sessions.new p {
@@ -784,4 +785,100 @@ body.discussions.show #content-comments .comment-toolbar .attachment-icon {
 
 div#navbar-collapse .simple_form {
   display: none;
+}
+
+// END //
+
+.loomio-menu {
+  background-color: #444;
+}
+
+.loomio-menu a {
+  color: #777;
+  margin-right: 20px;
+  margin-top: 9px;
+  font-size: 12px;
+}
+
+.loomio-menu ul {
+  display: inline-flex;   
+}
+
+.loomio-menu .container {
+  background-color: transparent;
+}
+
+li.quicklinks-title {
+  margin-right: 15px;
+  padding: 8px 10px 8px 10px;
+  color: #adadad;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: default;
+}
+
+.quicklinks-title img.loomio-globe {
+  margin-bottom: 0px;
+  height: 15px;
+  margin-right: 2px;
+  margin-left: -15px;
+  margin-top: -3px;
+}
+
+.loomio-menu a:before {
+  content: '';
+  height: 5px;
+  width: 5px;
+  //background-color: #999;
+  position: absolute;
+  margin-top: 7px;
+  margin-left: -9px;
+  border-radius: 10px;
+}
+
+.loomio-menu:hover {
+  background-color: #565656;
+  padding: 2px;
+  transition: ease 0.1s;
+  margin-bottom: -4px;
+}
+
+.loomio-menu {
+  background-color: #444;
+  transition: ease 0.1s;
+}
+
+body.welcome.index .loomio-menu {
+  display: none;
+}
+
+.loomio-menu:hover a {
+  color: #cecece;
+  transition: ease 0.1s;
+}
+
+.loomio-menu:hover li {
+  color: #cecece !important;
+  transition: ease 0.1s;
+}
+
+.loomio-menu:hover .quicklinks-title img.loomio-globe {
+-webkit-animation: rotate 5s linear infinite ;
+-moz-animation: rotate 5s linear infinite ;
+-o-animation: rotate 5s linear infinite ;
+//background-color: #3071A9 ;
+//border-radius: 10px;
+}
+
+@-webkit-keyframes rotate {
+from { -webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(0px); }
+to { -webkit-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
+}
+@-moz-keyframes rotate {
+from { -moz-transform: rotate(0deg) scale(1) skew(1deg) translate(0px); }
+to { -moz-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
+}
+@-o-keyframes rotate {
+from { -o-transform: rotate(0deg) scale(1) skew(1deg) translate(0px); }
+to { -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
 }
