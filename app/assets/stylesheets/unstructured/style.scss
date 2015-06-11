@@ -814,6 +814,7 @@ li.quicklinks-title {
   color: #adadad;
   font-size: 12px;
   font-weight: 500;
+  width: 135px;
   cursor: default;
 }
 
@@ -881,4 +882,61 @@ to { -moz-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
 @-o-keyframes rotate {
 from { -o-transform: rotate(0deg) scale(1) skew(1deg) translate(0px); }
 to { -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
+}
+
+body.explore.index .main-container {
+  background-color: white;
+}
+
+body.explore .group {
+  /* background-color: #f9f9f9; */
+  margin-bottom: 1.7em;
+  border: 1px solid #eee;
+}
+
+body.explore .group-heading {
+  background-repeat: none;
+  height: 94px;
+  background-color: #999;
+  padding: 0 1.5em;
+  position: relative;
+}
+
+body.explore .group-heading .group-logo {
+  position: absolute;
+  top: 45px;
+  left: 20px;
+  width: 67px;
+  height: 67px;
+  /* background-color: #333; */
+  background: url(/assets/default-logo-card.png) no-repeat top center white;
+  background-color: #555;
+  border: 0px;
+  box-shadow: 0px 0px 1px white;
+}
+
+body.explore .group:hover {
+  background-color: #eee;
+}
+
+body.explore .page-container a:hover:hover {
+  color: inherit;
+}
+
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
