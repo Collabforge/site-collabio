@@ -13,6 +13,6 @@
         = link_to 'Public Groups', explore_path
     - else
       %p
-        To join in the discussions, you simply need to connect your #shapeRMIT account with Loomio by clicking log in below and then "Connect ShapeRMIT account":
+        To join in the discussions, you simply need to connect your #shapeRMIT account with Loomio by clicking the below link and then "Connect ShapeRMIT account":
       %i.fa.fa-chevron-right.login-link
-        = link_to t(:log_in), new_user_session_path(return_to: request.original_url), class: 'login'
+        = link_to t(:connect_your_account), new_user_session_path(return_to: request.original_url), class: 'login'

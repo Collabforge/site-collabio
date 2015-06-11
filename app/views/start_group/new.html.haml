@@ -45,7 +45,7 @@
               = f.radio_button :is_commercial, true
               = f.label :is_commercial_true, t(:"start_group_form.subscription_html")
             .radio
-              = f.radio_button :is_commercial, false
+              = f.radio_button :is_commercial, false, :checked => true
               = f.label :is_commercial_false, t(:"start_group_form.donation_html")
 
             = f.submit t(:"common.start_group"), class: 'btn btn-success btn-block', :data => { :disable_with => t(:"common.start_group") }, id: 'sign-up-submit'

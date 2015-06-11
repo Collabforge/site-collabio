@@ -945,3 +945,11 @@ body.explore .page-container a:hover:hover {
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
+
+.start_group .radio {
+  display: none;
+}
+
+.start_group .col-sm-offset-3 p {
+  display: none;
+}
