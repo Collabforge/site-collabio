@@ -776,8 +776,12 @@ to { -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
 }
 
 
-// HIDE ATTACHMENTS FOR COMMENTS - NOT PERMANENT //
+// HIDE ATTACHMENTS FOR COMMENTS & TOP SEARCH BAR - NOT PERMANENT //
 
 body.discussions.show #content-comments .comment-toolbar .attachment-icon {
  display: none;   
+}
+
+div#navbar-collapse .simple_form {
+  display: none;
 }
