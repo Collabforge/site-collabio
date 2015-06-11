@@ -769,3 +769,15 @@ to { -o-transform: rotate(360deg) scale(1) skew(1deg) translate(0px); }
 #content-proposal .vote-buttons a:hover {
   background-color: transparent;
 }
+
+#group-privacy-label {
+ margin-left: 2px;
+ color: #428bca;
+}
+
+
+// HIDE ATTACHMENTS FOR COMMENTS - NOT PERMANENT //
+
+body.discussions.show #content-comments .comment-toolbar .attachment-icon {
+ display: none;   
+}
