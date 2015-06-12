@@ -54,7 +54,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   alias_method :facebook, :all
   alias_method :browser_id, :all
   alias_method :twitter, :all
-  alias_method :custom_oauth2, :all
 
   private
   def sign_in_and_redirect(user)

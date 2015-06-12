@@ -8,8 +8,6 @@ Loomio::Application.routes.draw do
     get 'setup_all_notifications'
   end
 
-  root :to => 'welcome#index'
-
   scope '/angular', controller: 'angular', path: 'angular', as: 'angular' do
     get '/' => 'angular#index'
     post :on
@@ -18,7 +16,6 @@ Loomio::Application.routes.draw do
 
   slug_regex = /[a-z0-9\-\_]*/i
 
-  ActiveAdmin.routes(self)
 
   namespace :admin do
     get 'url_info' => 'base#url_info'
@@ -29,8 +26,16 @@ Loomio::Application.routes.draw do
       get :retention
       get :events
       get :weekly_activity
+      get :cohorts
+      get :aaarrr
     end
+    #get :test
+    #resources :groups, only: :show
+    #get 'group/:id'
+    #get 'group/:id' => 'cohort_reports#group'
   end
+
+  ActiveAdmin.routes(self)
 
   namespace :api, path: '/api/v1', defaults: {format: :json} do
     resources :groups, only: [:show, :create, :update] do
@@ -196,9 +201,9 @@ Loomio::Application.routes.draw do
     patch '/' => 'groups#update'
   end
 
-  # constraints(MainDomainConstraint) do
-  #   root :to => 'marketing#index'
-  # end
+  constraints(MainDomainConstraint) do
+    root :to => 'marketing#index'
+  end
 
   delete 'membership_requests/:id/cancel', to: 'groups/membership_requests#cancel', as: :cancel_membership_request
 

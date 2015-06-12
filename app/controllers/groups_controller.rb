@@ -118,7 +118,6 @@ class GroupsController < GroupBaseController
     @closed_motions = Queries::VisibleMotions.new(user: current_user, groups: @group).order('closed_at desc')
     @feed_url = group_url @group, format: :xml if @group.is_visible_to_public?
 
-    GroupVisitService.record(visit: current_visit, group: @group)
     build_discussion_index_caches
   end
 
@@ -146,7 +145,7 @@ class GroupsController < GroupBaseController
 
   def members_autocomplete
     users = @group.users.where('username ilike :term or name ilike :term ', {term: "%#{params[:q]}%"})
-    render json: users.map{|u| {name: "#{u.name} #{u.username}", username: u.username, real_name: u.name} }, root: false  
+    render json: users.map{|u| {name: "#{u.name} #{u.username}", username: u.username, real_name: u.name} }, root: false
   end
 
   def set_volume

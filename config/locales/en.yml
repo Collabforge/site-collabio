@@ -84,7 +84,7 @@ en:
     group_already_setup: "The group you are trying to setup already exists."
     passwords_did_not_match: "Password did not match confirmation"
     proposal_already_exists: "There is already an open proposal in this discussion."
-    username_cannot_contain_whitespace: "Username cannot contain spaces"
+    username_must_be_alphanumeric: "Username must contain only lowercase letters and digits."
     user_with_email_address_already_in_group: "A user with that email address already belongs to this group."
     you_have_already_requested_membership: "You have already requested membership to this group."
     you_are_already_a_member_of_this_group: "You are already a member of this group."
@@ -235,6 +235,7 @@ en:
     new_vote: "%{position} on the proposal"
     new_comment: "commented on the discussion"
     comment_liked: "liked your comment in the discussion"
+    comment_replied_to: "replied to your comment in"
     user_mentioned: "mentioned you in a comment in"
     membership_requested: "requested membership to"
     membership_request_approved: 'approved your request to join'
@@ -396,7 +397,7 @@ en:
 
     members_defaults: "With the default settings, members can:"
     m1: Delete their own comments.
-    m3: Edit the title and description of proposals they start, until someone has stated their position.
+    m3: Edit the title and description of proposals they start, until someone has stated their position. 
     m4: Edit the closing date of proposals they start, until they close.
     m5: Edit the title and context of any discussion.
     m6: Start a subgroup, which they become the coordinator of.
@@ -1322,13 +1323,11 @@ en:
   log_in_with_facebook: Log in with Facebook
   log_in_with_persona: Log in with Persona
   log_in_with_twitter: Log in with Twitter
-  log_in_with_custom_oauth2: 'Connect %{name}'
   sign_up_with_third_party: 'Or sign up with a third-party account:'
   sign_up_with_google: Sign up with Google
   sign_up_with_facebook: Sign up with Facebook
   sign_up_with_persona: Sign up with Persona
   sign_up_with_twitter: Sign up with Twitter
-  sign_up_with_custom_oauth2: 'Sign up with %{name}'
 
   common:
     profile: "Profile"

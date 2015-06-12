@@ -1,4 +1,5 @@
-%nav.navbar.navbar-default.navbar-top
+
+%nav.navbar.navbar-default.navbar-fixed-top
   .container
     .navbar-header
       - if user_signed_in?
@@ -9,117 +10,48 @@
           %span.icon-bar
           %span.icon-bar
 
-        %a.navbar-brand
-          .container
-            .row.header-top
-              %a{ href: "https://shapermit.com/", title: "RMIT University home page" }
-                .col-md-3.app-logo{ style: "background-image: url(/assets/rmit-logo.png)" }
-                .col-md-2.app-logo.second-logo{ style: "background-image: url(/assets/shape-rmit-logo.png)" }
-              .col-md-4.nav-float-right.collapse.navbar-collapse#navbar-collapse
-                %ul.nav.navbar-nav
-                  .user-options.visible-xs
-                  = render 'search'
-              .col-md-3.user-assets.nav-float-right
-                %ul.nav.navbar-nav
-                  %li#inbox-container
-                    %a{href: inbox_path}
-                      %i.fa.fa-inbox
-                      %span#inbox-count.activity-count.label
-                  %li.dropdown#notifications-container
-                    %a.dropdown-toggle.notifications-dropdown-btn{'data-toggle' => 'dropdown', :href => '#', :id => 'notifications-toggle'}
-                      %i.fa.fa-bell
-                      %span#notifications-count.label.activity-count
-                    %ul.dropdown-menu
-                      %li
-                        %h3= t("notifications.header")
-                      %li#notification-dropdown-items
-                        %ul
-                          %li Loading
-                      %li#notifications-see-more= link_to t(:see_all_notifications), notifications_path
-                  %li.dropdown#groups
-                    %a.dropdown-toggle.groups-dropdown-btn{href: "#", 'data-toggle' => 'dropdown'}
-                      %i.fa.fa-group
-                      %span.hidden-xs= t :"common.groups"
-                    %ul.dropdown-menu
-                      #group-dropdown-items
-                      - if current_user.show_start_group_button?
-                        %li.group-item.group-links
-                          =link_to t(:request_new_group), start_group_path, class: 'new-group'
-                        %li.group-item.group-links
-                          =link_to t(:find_a_group), explore_path, class: 'find-group'
-              %a{ href: "https://shapermit.com/", title: "ShapeRMIT home" }
-                
-              
-          .container
-            .row
-              .col-md-3.user-menu-list.hidden-xs
-                = render 'user_dropdown'
-              .col-md-9.child-navigation 
+        %a.navbar-brand.app-logo{ href: dashboard_or_root_path, title: t(:"organisation.name"), style: "background-image: url(#{logo_path})" }
+
+        %ul.nav.navbar-nav
+          %li#inbox-container
+            %a{href: inbox_path}
+              %i.fa.fa-inbox
+              %span#inbox-count.activity-count.label
+          %li.dropdown#notifications-container
+            %a.dropdown-toggle.notifications-dropdown-btn{'data-toggle' => 'dropdown', :href => '#', :id => 'notifications-toggle'}
+              %i.fa.fa-bell
+              %span#notifications-count.label.activity-count
+            %ul.dropdown-menu
+              %li
+                %h3= t("notifications.header")
+              %li#notification-dropdown-items
                 %ul
-                  %li     
-                  = link_to 'THE STORY SO FAR', 'http://shapermit.com/the-story-so-far', :title => 'go to The Story So Far'
-                  %li 
-                  = link_to 'THE NEXT 5 YEARS', 'http://shapermit.com/the-next-5-years', :title => 'go to The Next 5 Years'
-                  %li 
-                  = link_to 'DISCUSSIONS & WORKGROUPS', 'http://shapermit.com/discussions-and-workgroups', :title => 'go to Discussions and Workgroups'
-                  %li 
-                  = link_to 'NEWS & EVENTS', 'http://shapermit.com/news-and-events', :title => 'go to News and Events'
-                  %li 
-                  = link_to 'CONTACT', 'http://shapermit.com/contact', :title => 'go to Contact'
-       
-        
+                  %li Loading
+              %li#notifications-see-more= link_to t(:see_all_notifications), notifications_path
+          %li.dropdown#groups
+            %a.dropdown-toggle.groups-dropdown-btn{href: "#", 'data-toggle' => 'dropdown'}
+              %i.fa.fa-group
+              %span.hidden-xs= t :"common.groups"
+            %ul.dropdown-menu
+              #group-dropdown-items
+              - if current_user.show_start_group_button?
+                %li.group-item.group-links
+                  =link_to t(:request_new_group), start_group_path, class: 'new-group'
+                %li.group-item.group-links
+                  =link_to t(:find_a_group), explore_path, class: 'find-group'
 
+        .collapse.navbar-collapse#navbar-collapse
+          %ul.nav.navbar-nav
+            .user-options.visible-xs
+              = render 'application/user_profile_options'
+            = render 'search'
 
-
-        
+        %ul.nav.navbar-nav.navbar-right.hidden-xs
+          = render 'user_dropdown'
 
       - else
-        .navbar.navbar-top{role: 'navigation'}
-          %nav.navbar.navbar-default.navbar-top
-            .container.testclass
-              .navbar-header
-                %a.navbar-brand
-                  .container
-                    .row.header-top
-                      %a{ href: "https://shapermit.com/", title: "RMIT University home page" }
-                        .col-md-3.app-logo{ style: "background-image: url(/assets/rmit-logo.png)" }
-                        .col-md-2.app-logo.second-logo{ style: "background-image: url(/assets/shape-rmit-logo.png)" }
-                        .col-md-4.nav-float-right.collapse.navbar-collapse#navbar-collapse
-                          %ul.nav.navbar-nav
-                            .user-options.visible-xs
-                            = render 'search'
-                        .col-md-3.user-assets.nav-float-right
-                    %a{ href: "https://shapermit.com/", title: "ShapeRMIT home" }
-
-              .container
-                .row
-                  .col-md-3.child-navigation-sign-log.hidden-xs
-                    %ul
-                      %li     
-                      = link_to 'Log In', 'sign_in'
-                  .col-md-9.child-navigation 
-                    %ul
-                      %li     
-                      = link_to 'THE STORY SO FAR', 'http://shapermit.com/the-story-so-far', :title => 'go to The Story So Far'
-                      %li 
-                      = link_to 'THE NEXT 5 YEARS', 'http://shapermit.com/the-next-5-years', :title => 'go to The Next 5 Years'
-                      %li 
-                      = link_to 'DISCUSSIONS & WORKGROUPS', 'http://shapermit.com/discussions-and-workgroups', :title => 'go to Discussions and Workgroups'
-                      %li 
-                      = link_to 'NEWS & EVENTS', 'http://shapermit.com/news-and-events', :title => 'go to News and Events'
-                      %li 
-                      = link_to 'CONTACT', 'http://shapermit.com/contact', :title => 'go to Contact'
-                      
-.loomio-menu
-  .container
-    %ul
-      %li.quicklinks-title
-        %img.loomio-globe(src="/assets/loomio-globe-small.png")
-        Loomio Quick Links
-      %li
-      = link_to 'Dashboard', '/dashboard', :title => 'go to your dashboard'
-      %li
-      = link_to 'Profile', '/profile', :title => 'go to your profile settings'
-      %li
-      = link_to 'Groups', '/explore', :title => 'go to explore group'
-
+        %a.navbar-brand.app-logo{ href: dashboard_or_root_path, title: t(:"organisation.name"), style: "background-image: url(#{logo_path})" }
+        %nav
+          %ul.nav.navbar-nav.navbar-right.pull-right
+            - unless controller_name == "group_requests"
+              %li=link_to t(:log_in), new_user_session_path(return_to: request.original_url), class: 'login'

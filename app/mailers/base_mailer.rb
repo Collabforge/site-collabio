@@ -8,7 +8,7 @@ class BaseMailer < ActionMailer::Base
 
   add_template_helper(ReadableUnguessableUrlsHelper)
 
-  default :from => "ShapeRMIT <webmaster@collabcoapp.com>"
+  default :from => "Loomio <notifications@loomio.org>"
   before_action :utm_hash
 
   protected
@@ -21,7 +21,7 @@ class BaseMailer < ActionMailer::Base
   end
 
   def email_subject_prefix(group_name)
-    "[ShapeRMIT: #{group_name}]"
+    "[Loomio: #{group_name}]"
   end
 
   def initialize(method_name=nil, *args)
@@ -31,6 +31,6 @@ class BaseMailer < ActionMailer::Base
   end
 
   def from_user_via_loomio(user)
-    "\"#{user.name} (ShapeRMIT)\" <webmaster@collabcoapp.com>"
+    "\"#{user.name} (Loomio)\" <notifications@loomio.org>"
   end
 end

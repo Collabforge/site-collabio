@@ -1,9 +1,2 @@
-.col-xs-4.footer-left
-  CRICOS provider number: 00122A
-  %br
-  RTO Code: 3046
-.col-xs-4.footer-center
-  = link_to 'Visit the RMIT University site', 'http://www.rmit.com', target: '_blank'
-.col-xs-4.footer-right
-  = link_to 'Privacy', 'http://www.rmit.edu.au/utilities/privacy/', target: '_blank'
-
+.col-xs-12
+  = t :"footer.independent_install_html", hostname: ENV['CANONICAL_HOST'] || request.host

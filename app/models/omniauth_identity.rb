@@ -15,7 +15,6 @@ class OmniauthIdentity < ActiveRecord::Base
     when 'google' then 'Google'
     when 'browser_id' then 'Persona'
     when 'twitter' then 'Twitter'
-    when 'custom_oauth2' then Rails.application.secrets.custom_oauth2_name
     else
       'Provider'
     end
