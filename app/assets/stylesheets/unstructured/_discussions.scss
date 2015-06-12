@@ -175,7 +175,7 @@ body.discussions.show {
   .discussion-title-container {
     #discussion-title {
       padding-left: 15px;
-      font-size: 22px;
+      font-size: 22px; 
     }
     .dropdown{
       display: inline;
@@ -442,14 +442,19 @@ body.discussions.show {
             margin-bottom: -4px;
            }
         }
-        h1, h2, h3, h4 {
+        h1, h2, h3, h4, ol, ul {
           &:first-child {
             clear: left;
             position: relative;
             top: -12px;
             margin-bottom: -12px;
           }
-        }
+          ul {
+            clear: left;
+            position: relative;
+            top: -12px;
+            margin-bottom: -12px;
+        }}
         ol, p, ul {
           color: $text-black;
         }

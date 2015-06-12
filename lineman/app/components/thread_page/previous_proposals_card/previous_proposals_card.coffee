@@ -3,14 +3,7 @@ angular.module('loomioApp').directive 'previousProposalsCard', ->
   restrict: 'E'
   templateUrl: 'generated/components/thread_page/previous_proposals_card/previous_proposals_card.html'
   replace: true
-  controller: ($scope, $rootScope, $location, Records, ProposalFormService) ->
-
-    Records.votes.fetchMyVotesByDiscussion($scope.discussion)
-    Records.proposals.fetchByDiscussion($scope.discussion).then ->
-      if target = $location.hash().match /^proposal-(\d+)$/
-        if proposal = Records.proposals.find(parseInt(target[1]))
-          $scope.selectProposal(proposal)
-          $rootScope.$broadcast 'threadPageProposalsLoaded', proposal.id
+  controller: ($scope, Records, ProposalFormService) ->
 
     $scope.selectedProposalId = 0
 

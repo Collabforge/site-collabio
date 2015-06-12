@@ -1,5 +1,5 @@
 class AngularSupportController < ApplicationController
-  around_filter :ensure_testing_environment
+  before_filter :prevent_production_destruction
 
   USER_PARAMS = {name: 'Patrick Swayze',
                  email: 'patrick_swayze@loomio.org',
@@ -124,35 +124,33 @@ class AngularSupportController < ApplicationController
     MembershipService.add_users_to_group(users: [patrick], group: another_group, inviter: jennifer, message: 'join in')
 
     redirect_to discussion_url(testing_discussion)
+  rescue => e
+    raise e.inspect
   end
 
   private
-
-  def ensure_testing_environment
-    raise "Do not call me." if Rails.env.production?
-    tmp, Rails.env = Rails.env, 'test'
-    yield
-    Rails.env = tmp
+  def prevent_production_destruction
+    raise "No way!" if Rails.env.production?
   end
 
   def patrick
-    User.find_by_email USER_PARAMS[:email]
+    User.where(email: USER_PARAMS[:email]).first
   end
 
   def jennifer
-    User.find_by_email COMMENTER_PARAMS[:email]
+    User.where(email: COMMENTER_PARAMS[:email]).first
   end
 
   def max
-    User.find_by_email INVITEE_PARAMS[:email]
+    User.where(email: INVITEE_PARAMS[:email]).first
   end
 
   def testing_group
-    Group.find_by_name GROUP_NAME
+    Group.where(name: GROUP_NAME).first
   end
 
   def other_testing_group
-    Group.find_by_name OTHER_GROUP_NAME
+    Group.where(name: OTHER_GROUP_NAME).first
   end
 
   def testing_discussion
@@ -166,19 +164,33 @@ class AngularSupportController < ApplicationController
   end
 
   def reset_database
-    User.delete_all
-    Group.delete_all
+    User.where(email: [USER_PARAMS[:email], COMMENTER_PARAMS[:email], INVITEE_PARAMS[:email]]).each(&:destroy)
+
+    if testing_group.present?
+      testing_group.users.each(&:destroy)
+      testing_group.destroy
+    end
+
+    if other_testing_group.present?
+      other_testing_group.users.each(&:destroy)
+      other_testing_group.destroy
+    end
 
     patrick = User.create!(USER_PARAMS)
     jennifer = User.create!(COMMENTER_PARAMS)
     max = User.create!(INVITEE_PARAMS)
 
-    group = Group.create!(name: GROUP_NAME,
-                          membership_granted_upon: 'approval',
-                          is_visible_to_public: true,
-                          is_visible_to_parent_members: false)
+    group = Group.create!(name: GROUP_NAME, membership_granted_upon: 'approval', is_visible_to_public: true)
+    group.visible_to = 'public'
+    group.save!
+
     group.add_admin! patrick
     group.add_member! jennifer
+
+    patrick.reload
+    jennifer.reload
+    max.reload
+    group.reload
 
     Discussion.create!(title: DISCUSSION_TITLE, group: group, author: jennifer, private: true)
   end

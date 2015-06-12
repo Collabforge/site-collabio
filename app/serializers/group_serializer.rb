@@ -17,8 +17,7 @@ class GroupSerializer < ActiveModel::Serializer
              :membership_granted_upon,
              :discussion_privacy_options,
              :logo_url_medium,
-             :cover_url_desktop,
-             :has_discussions
+             :cover_url_desktop
 
   has_one :parent, serializer: GroupSerializer, root: 'groups'
 
@@ -40,10 +39,6 @@ class GroupSerializer < ActiveModel::Serializer
 
   def members_can_raise_proposals
     object.members_can_raise_motions
-  end
-
-  def has_discussions
-    object.discussions_count > 0
   end
 
 end

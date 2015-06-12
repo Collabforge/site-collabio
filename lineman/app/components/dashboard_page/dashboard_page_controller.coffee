@@ -1,5 +1,5 @@
-angular.module('loomioApp').controller 'DashboardPageController', ($rootScope, $scope, Records, CurrentUser, LoadingService, ThreadQueryService) ->
-  $rootScope.$broadcast('currentComponent', { page: 'dashboardPage' })
+angular.module('loomioApp').controller 'DashboardPageController', ($rootScope, Records, CurrentUser, LoadingService, ThreadQueryService) ->
+  $rootScope.$broadcast('currentComponent', 'dashboardPage')
   $rootScope.$broadcast('setTitle', 'Dashboard')
 
   Records.votes.fetchMyRecentVotes()
@@ -10,6 +10,7 @@ angular.module('loomioApp').controller 'DashboardPageController', ($rootScope, $
     show_muted:         0
     show_proposals:     0
     show_participating: 0
+  @filter    = -> CurrentUser.dashboardFilter
 
   @timeframes =
     today:     { from: '1 second ago', to: '-10 year ago' }
@@ -53,11 +54,11 @@ angular.module('loomioApp').controller 'DashboardPageController', ($rootScope, $
     @updateQueries()
     @loadMore() if @loaded[@filter] == 0
 
-  @setFilter = (filter = 'show_all') =>
+  @setFilter = (filter) ->
     @filter = filter
     @currentBaseQuery = ThreadQueryService.filterQuery(@filter)
     @refresh()
-  @setFilter()
-  $scope.$on 'homePageClicked', => @setFilter()
+  @setFilter 'show_all'
+
 
   return

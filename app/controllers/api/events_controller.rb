@@ -3,17 +3,24 @@ class API::EventsController < API::RestfulController
   private
 
   def visible_records
-    load_and_authorize :discussion
-    resource_class.where(discussion: @discussion).order(sequence_id: :asc)
+    load_and_authorize_discussion
+    Event.where(discussion: @discussion).order(sequence_id: params_reverse? ? :desc : :asc)
   end
 
   def page_collection(collection)
-    collection.where('sequence_id >= ?', params[:from] || 0)
-              .limit(params[:per] || default_page_size)
+    if params_reverse?
+      collection.where('sequence_id < ?', params[:from] || 0)
+    else
+      collection.where('sequence_id > ?', params[:from] || 0)
+    end.limit(params[:per] || default_page_size)
   end
 
   def default_page_size
-    30
+    50
+  end
+
+  def params_reverse?
+    params[:reverse] == 'true'
   end
 
 end

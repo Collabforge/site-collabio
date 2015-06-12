@@ -1,6 +1,4 @@
 //= require jquery
-//= require ahoy
+//= require detect_locale
 //= require bootstrap
 //= require marketing/carousel
-//
-ahoy.trackView();

@@ -28,7 +28,7 @@ angular.module('loomioApp').factory 'UserModel', (BaseModel) ->
       @notificationsView.data()
 
     groups: ->
-      @recordStore.groups.find(id: { $in: @groupIds() })
+      @groupsView.data()
 
     parentGroups: ->
       @parentGroupsView.data()
@@ -56,11 +56,6 @@ angular.module('loomioApp').factory 'UserModel', (BaseModel) ->
     canCloseOrExtendProposal: (proposal) ->
       proposal.isActive() and
       (@isAdminOf(proposal.group()) or @isAuthorOf(proposal))
-
-    canSeePrivateContentFor: (group) ->
-      group.visibleTo == 'public' or
-      @isMemberOf(group) or
-      (group.visibleTo == 'parent_members' and @isMemberOf(group.parent()))
 
     isAuthorOf: (object) ->
       @id == object.authorId

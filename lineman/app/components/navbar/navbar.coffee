@@ -3,15 +3,12 @@ angular.module('loomioApp').directive 'navbar', ->
   restrict: 'E'
   templateUrl: 'generated/components/navbar/navbar.html'
   replace: true
-  controller: ($scope, $rootScope, Records, ThreadQueryService) ->
+  controller: ($scope, Records, ThreadQueryService) ->
     $scope.$on 'currentComponent', (el, component) ->
       $scope.selected = component
 
     $scope.unreadThreadCount = ->
       ThreadQueryService.filterQuery('show_unread').length()
-
-    $scope.homePageClicked = ->
-      $rootScope.$broadcast 'homePageClicked'
 
     if !$scope.inboxLoaded
       Records.discussions.fetchInbox().then ->

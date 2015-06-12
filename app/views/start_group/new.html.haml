@@ -36,7 +36,7 @@
 
         .form-group
           .col-sm-3
-
+            
           .col-sm-9
             - if @errors.include? 'is_commercial'
               .form__error= t :"start_group_form.payment_error"
@@ -56,3 +56,4 @@
           .col-sm-9.col-sm-offset-3
             %p= t :"pricing_page.in_development_html"
             %p= link_to t(:'common.find_out_more'), pricing_path, target: '_blank'
+

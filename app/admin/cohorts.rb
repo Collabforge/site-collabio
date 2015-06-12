@@ -16,44 +16,6 @@ ActiveAdmin.register Cohort do
     actions
   end
 
-  show do
-    h3 cohort.id
-    div do
-      h2 'joined'
-      ul do
-        cohort.organisations.each do |group|
-          li do
-            a(href: admin_group_path(group)) do
-              group.name
-            end
-          end
-        end
-      end
-
-      h2 'activated'
-      ul do
-        cohort.activated_organisations.each do |group|
-          li do
-            a(href: admin_group_path(group)) do
-              group.name
-            end
-          end
-        end
-      end
-
-      h2 'retained'
-      ul do
-        cohort.retained_organisations.each do |group|
-          li do
-            a(href: admin_group_path(group)) do
-              group.name
-            end
-          end
-        end
-      end
-    end
-  end
-
   controller do
     def permitted_params
       params.permit!
