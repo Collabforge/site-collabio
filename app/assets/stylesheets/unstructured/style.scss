@@ -2,11 +2,11 @@
 
 @font-face {
     font-family: 'Museo-500';
-    src: font-url('/assets/2E6735_0_0.eot');
-    src: font-url('/assets/2E6735_0_0.eot?#iefix') format('embedded-opentype'),
-         font-url('/assets/2E6735_0_0.woff2') format('woff2'),
-         font-url('/assets/2E6735_0_0.woff') format('woff'),
-         font-url('/assets/2E6735_0_0.ttf') format('truetype'); }
+    src: url('fonts/2E6735_0_0.eot');
+    src: url('fonts/2E6735_0_0.eot?#iefix') format('embedded-opentype'),
+         url('fonts/2E6735_0_0.woff2') format('woff2'),
+         url('fonts/2E6735_0_0.woff') format('woff'),
+         url('fonts/2E6735_0_0.ttf') format('truetype'); }
 
 .test {
  color: red;
