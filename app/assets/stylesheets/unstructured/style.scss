@@ -633,13 +633,13 @@ body.groups.show .discussion-preview .discussion-title:before {
   padding-bottom: 10px;
 }
 
-.discussion-preview .discussion-title:before {
+/*.discussion-preview .discussion-title:before {
   content: "\f054";
   font-family: fontawesome;
   margin-right: 5px;
   display: inline-block;
   color: #dc291e;
-}
+} */
 
 #content-proposal .vote-buttons .btn {
   border-radius: 40px;
@@ -721,27 +721,26 @@ body.discussions.show #content-comments ul#activity-list .activity-item-body {
 
 
 
-.floating{
+.floating {
     -webkit-animation-name: Floatingx;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: ease-in-out;
     -moz-animation-name: Floating;
-    -moz-animation-duration: 3s;
+    -moz-animation-duration: 3.0s;
     -moz-animation-iteration-count: infinite;
     -moz-animation-timing-function: ease-in-out;
   margin-left: 0px;
   margin-top: 0px;
-
 }
 
-@-webkit-keyframes Floatingx{
+@-webkit-keyframes Floatingx {
     from {-webkit-transform:translate(0, 0px);}
     55% {-webkit-transform:translate(0, 10px);}
-    to {-webkit-transform: translate(0, -0px);    }    
+    to {-webkit-transform: translate(0, -0px);}    
 }
     
-@-moz-keyframes Floating{
+@-moz-keyframes Floating {
     from {-moz-transform:translate(0, 0px);}
     55% {-moz-transform:translate(0, 10px);}
     to {-moz-transform: translate(0, -0px);}    
