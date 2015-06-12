@@ -1,8 +1,12 @@
+//@import asset-url("2e6735");
+
 @font-face {
-  font-family: "Museo-500";
-  src: url("../font/2E2515_0_0.eot");
-  src: url("../font/font/2E2515_0_0.eot?#iefix") format("embedded-opentype"), url("../font/font/2E2515_0_0.woff2") format("woff2"), url("../font/font/2E2515_0_0.woff") format("woff"), url("../font/font/2E2515_0_0.ttf") format("truetype");
-}
+    font-family: 'Museo-500';
+    src: font-url('/assets/2E6735_0_0.eot');
+    src: font-url('/assets/2E6735_0_0.eot?#iefix') format('embedded-opentype'),
+         font-url('/assets/2E6735_0_0.woff2') format('woff2'),
+         font-url('/assets/2E6735_0_0.woff') format('woff'),
+         font-url('/assets/2E6735_0_0.ttf') format('truetype'); }
 
 .test {
  color: red;
@@ -838,10 +842,8 @@ li.quicklinks-title {
 }
 
 .loomio-menu:hover {
-  background-color: #565656;
-  padding: 2px;
+  background-color: #565761;
   transition: ease 0.1s;
-  margin-bottom: -4px;
 }
 
 .loomio-menu {
@@ -952,4 +954,10 @@ body.explore .page-container a:hover:hover {
 
 .start_group .col-sm-offset-3 p {
   display: none;
+}
+
+.form-horizontal .control-label {
+  text-align: right;
+  margin-bottom: 0;
+  padding-top: 0px;
 }

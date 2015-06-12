@@ -36,7 +36,7 @@
 
         .form-group
           .col-sm-3
-            %label.control-label{for: 'payment'}= t :"start_group_form.payment"
+            
           .col-sm-9
             - if @errors.include? 'is_commercial'
               .form__error= t :"start_group_form.payment_error"
