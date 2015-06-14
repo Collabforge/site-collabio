@@ -5,27 +5,36 @@ module ReadableUnguessableUrlsHelper
                             'motion' => :name }
   MODELS_WITH_SLUGS.freeze
 
-  ['user', 'motion'].each do |model|
+  MODELS_WITH_SLUGS.keys.each do |model|
+    next if model == 'group'
+    model = model.to_s.downcase
+
     define_method("#{model}_url", ->(instance, options={}) {
       options = options.merge( host_and_port )
                        .merge( route_hash(instance, model) )
 
       url_for(options)
     })
-  end
 
-  def discussion_url(discussion, options = {})
-    options = options.merge(host: host_for_group(discussion.group)).
-                      merge(port: port).
-                      merge(route_hash(discussion, 'discussion'))
+    define_method("#{model}_path", ->(instance, options={}) {
+      options = options.merge(only_path: true)
 
-    url_for(options)
+      self.send("#{model}_url", instance, options)
+    })
+
   end
 
   def group_url(group, options = {})
-    options = options.merge(host: host_for_group(group)).
-                      merge(port: port).
-                      merge(route_hash(group, 'group'))
+    options = options.merge( host_and_port ).
+                      merge( route_hash(group, 'group') ).
+                      merge( default_url_options )
+
+    if group.has_subdomain?
+      options[:subdomain] = group.subdomain
+    elsif ENV['DEFAULT_SUBDOMAIN']
+      options[:subdomain] = ENV['DEFAULT_SUBDOMAIN']
+    end
+
 
     if group.has_subdomain? and not group.is_subgroup?
       uri = URI(url_for(options))
@@ -36,54 +45,55 @@ module ReadableUnguessableUrlsHelper
     end
   end
 
-  MODELS_WITH_SLUGS.keys.each do |model|
-    define_method("#{model}_path", ->(instance, options={}) {
-      self.send("#{model}_url", instance, options)
-    })
+  def host_needed_to_link_to?(group)
+    if request.blank?
+      true
+    elsif group.has_subdomain?
+      group.subdomain != request.subdomain
+    elsif ENV['DEFAULT_SUBDOMAIN'].present?
+      request.subdomain != ENV['DEFAULT_SUBDOMAIN']
+    else
+      request.subdomain.present?
+    end
+  end
+
+  def group_path(group, options = {})
+    url = group_url(group, options)
+    if host_needed_to_link_to?(group)
+      url
+    else
+      uri = URI(url)
+      if uri.query.present?
+        "#{uri.path}?#{uri.query}"
+      else
+        uri.path
+      end
+    end
   end
 
   private
 
-  def host_for_group(group)
-    host(group.subdomain)
-  end
-
-  def host(subdomain = nil)
-    [subdomain || ENV['DEFAULT_SUBDOMAIN'], domain_and_tld].compact.join('.')
-  end
-
-  # for www.loomio.org this will return: loomio.org
-  def domain_and_tld
-    host = if request.present?
-      request.host
-    else
-      ActionMailer::Base.default_url_options[:host]
-    end
-    host.split('.').last(tld_length.to_i + 1).join('.')
-  end
-
-  def subdomain
-    request.subdomain
-  end
-
-  def tld_length
-    ENV['TLD_LENGTH'] || "1"
-  end
-
-  def port
+  def host_and_port
     if request.present?
-      if using_default_port?
-        nil
+      host = request.domain || request.host
+      if include_port?(request)
+        { host: host, port: request.port }
       else
-        request.port
+        { host: host, port: nil }
       end
     else
-      ActionMailer::Base.default_url_options[:port]
+      ActionMailer::Base.default_url_options
     end
   end
 
-  def using_default_port?
-    (request.port == 80  && !request.ssl?) or (request.port == 443 && request.ssl?)
+  def include_port?(request)
+    if    request.port == 80  && !request.ssl?
+      false
+    elsif request.port == 443 && request.ssl?
+      false
+    else
+      true
+    end
   end
 
   def route_hash(instance, model)
@@ -93,4 +103,5 @@ module ReadableUnguessableUrlsHelper
 
     { controller: controller, action: 'show', id: instance.key, slug: slug }
   end
+
 end
