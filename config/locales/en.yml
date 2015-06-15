@@ -1079,7 +1079,7 @@ en:
   group_setup:
     set_up_your_group: Set up your group
     desc_header: "You're almost there!"
-    desc_html: "As the group coordinator, you’re responsible for setting up and managing your Loomio group. After you choose a few settings, you can get into your new group, start a discussion or two, and send out some invitations! <p>When thinking about the simplest way you can describe your group, ask yourself: What do you want to achieve together? What types of decisions will you be making? Who will be involved?</p> <p>Once your group has been created, make it stand out by uploading a banner image and group logo!</p>"
+    desc_html: "As the group coordinator, you’re responsible for setting up and managing your Loomio group. After you choose a few settings, you can get into your new group, start a discussion or two, and send out some invitations! <p>When thinking about the simplest way you can describe your group, ask yourself: What do you want to achieve together? What types of decisions will you be making? Who will be involved?</p> <p>Once your group has been created you can make it stand out by uploading a banner image and group logo!</p>"
     submit: "Take me to my group!"
     payment_model:
       header: Loomio is for everyone!
