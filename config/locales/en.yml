@@ -256,7 +256,7 @@ en:
   find_a_group_hint: "To explore public groups"
   search_for_group: "Search for a group..."
   no_groups_found: "No groups found by that name!"
-  no_group_header: "<h1>Welcome to Loomio.</h1><p>To engge with discussions you will first need create or join a group. Once that's done this page will be replaced by a feed of your activity on this site.</p>"
+  no_group_header: "Welcome to Loomio.""<p>To engge with discussions you will first need create or join a group. Once that's done this page will be replaced by a feed of your activity on this site.</p>"
   empty_notifications: "You do not have any notifications yet."
   see_all_notifications: "See all notifications"
   sign_out: "Sign out"
