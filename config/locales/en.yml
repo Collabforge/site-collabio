@@ -257,7 +257,7 @@ en:
   search_for_group: "Search for a group..."
   no_groups_found: "No groups found by that name!"
   no_group_header: "Welcome to Loomio."
-  no_group_subtype: "To begin contributing to discussions you will need to first join or start a group. This page will then be replaced by a feed of your recent activity on this site."
+  no_group_subtype: "To begin contributing to discussions you will need to first join or start a group. This page will then be replaced by a feed of your activity on this site."
   empty_notifications: "You do not have any notifications yet."
   see_all_notifications: "See all notifications"
   sign_out: "Sign out"
