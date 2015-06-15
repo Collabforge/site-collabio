@@ -1322,7 +1322,7 @@ en:
   log_in_with_facebook: Log in with Facebook
   log_in_with_persona: Log in with Persona
   log_in_with_twitter: Log in with Twitter
-  log_in_with_custom_oauth2: 'Connect %{name}'
+  log_in_with_custom_oauth2: 'Connect #shapeRMIT Account'
   sign_up_with_third_party: 'Or sign up with a third-party account:'
   sign_up_with_google: Sign up with Google
   sign_up_with_facebook: Sign up with Facebook
