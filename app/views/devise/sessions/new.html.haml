@@ -41,7 +41,7 @@
                     = "Persona"
                 - if has_custom_oauth2?
                   = link_to user_omniauth_authorize_path(:custom_oauth2), class: 'btn btn-default btn-block btn-lg login', id: 'custom_oauth2-login-btn' do
-                    = "Connect #shapeRMIT Account", name: Rails.application.secrets.custom_oauth2_name
+                    = t:connect_shapeRMIT_account, name: Rails.application.secrets.custom_oauth2_name
 
           .terms
             =t(:tos_html, link_path: terms_of_service_path) if hosted_by_loomio?
