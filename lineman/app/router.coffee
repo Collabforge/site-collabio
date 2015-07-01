@@ -147,4 +147,4 @@
     #controller: 'ProfilePageController'
   #).otherwise
     #redirectTo: defaultRoute
-#>>>>>>> master
+#
