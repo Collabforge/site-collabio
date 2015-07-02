@@ -6,8 +6,8 @@
           - if omniauth_authenticated_and_waiting?
             %h1= t :confirm_your_details
             %p= t :now_that_your_logged_in, provider_name: @omniauth_authentication.provider_name
-            //%p
-              //%strong= t :already_have_account
+            %p
+              %strong= t :already_have_account
               = link_to( t(:link_it_up_instead), new_user_session_path)
             .signin_container
               = render "form"
